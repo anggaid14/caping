@@ -1,5 +1,5 @@
 <?php
-// FB : MANGGALA FEBRI VALENTINO
+// FB : Limink
 echo "Masukkan UserId/Uid : ";
 $uid 	= trim(fgets(STDIN));
 echo "Masukkan N ID : ";
@@ -30,7 +30,7 @@ while($i<$jumlah){
 function news($uid,$n){ 
 		$rand = rand(1,9999);
 		$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, "https://ai.caping.co.id/v2/event/news/view/$rand"); 
+			curl_setopt($ch, CURLOPT_URL, "https://ads.baca.co.id:443/api/v1/event/news/view/$rand"); 
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 				$headers = array();
@@ -43,7 +43,7 @@ function news($uid,$n){
 function video($uid,$n){
 		$rand = rand(1,9999);
 		$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, "https://ai.caping.co.id/v2/event/video/view/$rand"); 
+			curl_setopt($ch, CURLOPT_URL, "https://ads.baca.co.id:443/api/v1/event/video/view/$rand"); 
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 				$headers = array();
@@ -57,7 +57,7 @@ function video($uid,$n){
 function share($uid,$n){
 		$rand = rand(1,9999);
 		$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, "https://ai.caping.co.id/v2/event/share/news/$rand"); 
+			curl_setopt($ch, CURLOPT_URL, "https://ads.baca.co.id:443/api/v1/event/share/news/$rand"); 
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 				$headers = array();
@@ -70,7 +70,7 @@ function share($uid,$n){
 }
 function code($uid,$n){
 		$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, "https://ai.caping.co.id/v2/event/share/code"); 
+			curl_setopt($ch, CURLOPT_URL, "https://ads.baca.co.id:443/api/v1/event/share/code"); 
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 				$headers = array();
@@ -83,7 +83,7 @@ function code($uid,$n){
 }
 function klik($uid,$n){
 		$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, "https://ai.caping.co.id/v2/event/share/click/push"); 
+			curl_setopt($ch, CURLOPT_URL, "https://ads.baca.co.id:443/api/v1/event/share/click/push"); 
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 			$headers = array();
